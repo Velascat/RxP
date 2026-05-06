@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RuntimeResult",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "contract_kind": {
+      "type": "string",
+      "const": "runtime_result"
+    },
+    "invocation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_kind": {
+      "type": "string",
+      "enum": [
+        "subprocess",
+        "http",
+        "container",
+        "manual",
+        "unknown"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "succeeded",
+        "failed",
+        "timed_out",
+        "cancelled",
+        "rejected"
+      ]
+    },
+    "exit_code": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finished_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "stdout_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stderr_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "0.1"
+          },
+          "contract_kind": {
+            "type": "string",
+            "const": "artifact_descriptor"
+          },
+          "artifact_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "schema_version",
+          "contract_kind",
+          "artifact_id",
+          "path",
+          "kind",
+          "description",
+          "metadata"
+        ]
+      }
+    },
+    "error_summary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract_kind",
+    "invocation_id",
+    "runtime_name",
+    "runtime_kind",
+    "status",
+    "exit_code",
+    "started_at",
+    "finished_at",
+    "stdout_path",
+    "stderr_path",
+    "artifacts",
+    "error_summary",
+    "metadata"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "contract_kind": "runtime_invocation",
+  "invocation_id": "inv-001",
+  "runtime_name": "local-python",
+  "runtime_kind": "subprocess",
+  "working_directory": "/workspace/project",
+  "command": ["python", "-m", "pytest"],
+  "environment": {},
+  "timeout_seconds": 300,
+  "input_payload_path": null,
+  "output_result_path": "/workspace/project/.rxp/result.json",
+  "artifact_directory": "/workspace/project/.rxp/artifacts",
+  "metadata": {}
+}
