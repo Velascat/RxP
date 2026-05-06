@@ -1,4 +1,4 @@
-# RxP - Runtime eXecution Protocol
+# RxP — Runtime eXecution Protocol
 
 RxP is the **Runtime eXecution Protocol**. It defines normalized contracts for runtime invocation
 and runtime results produced by execution systems.
