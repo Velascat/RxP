@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1",
+  "contract_kind": "runtime_invocation",
+  "invocation_id": "inv-002",
+  "runtime_name": "external-adapter",
+  "runtime_kind": "subprocess",
+  "working_directory": "/workspace/adapters/archon",
+  "command": ["adapter-runner", "execute"],
+  "environment": {
+    "LOG_LEVEL": "info"
+  },
+  "timeout_seconds": 600,
+  "input_payload_path": "/tmp/rxp/input.json",
+  "output_result_path": "/tmp/rxp/output.json",
+  "artifact_directory": "/tmp/rxp/artifacts",
+  "metadata": {
+    "source_name": "archon",
+    "adapter": "archon"
+  }
+}

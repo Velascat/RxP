@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RuntimeInvocation",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "contract_kind": {"type": "string", "const": "runtime_invocation"},
+    "invocation_id": {"type": "string", "minLength": 1},
+    "runtime_name": {"type": "string", "minLength": 1},
+    "runtime_kind": {"type": "string", "enum": ["subprocess", "http", "container", "manual", "unknown"]},
+    "working_directory": {"type": "string", "minLength": 1},
+    "command": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "timeout_seconds": {
+      "type": ["integer", "null"],
+      "exclusiveMinimum": 0
+    },
+    "input_payload_path": {"type": ["string", "null"]},
+    "output_result_path": {"type": ["string", "null"]},
+    "artifact_directory": {"type": ["string", "null"]},
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract_kind",
+    "invocation_id",
+    "runtime_name",
+    "runtime_kind",
+    "working_directory",
+    "command",
+    "environment",
+    "timeout_seconds",
+    "input_payload_path",
+    "output_result_path",
+    "artifact_directory",
+    "metadata"
+  ]
+}

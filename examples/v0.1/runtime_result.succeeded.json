@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "contract_kind": "runtime_result",
+  "invocation_id": "inv-001",
+  "runtime_name": "local-python",
+  "runtime_kind": "subprocess",
+  "status": "succeeded",
+  "exit_code": 0,
+  "started_at": "2026-05-06T10:00:00Z",
+  "finished_at": "2026-05-06T10:01:00Z",
+  "stdout_path": "/workspace/project/.rxp/stdout.log",
+  "stderr_path": "/workspace/project/.rxp/stderr.log",
+  "artifacts": [
+    {
+      "schema_version": "0.1",
+      "contract_kind": "artifact_descriptor",
+      "artifact_id": "art-001",
+      "path": "/workspace/project/.rxp/artifacts/junit.xml",
+      "kind": "test_report",
+      "description": "JUnit XML report",
+      "metadata": {}
+    }
+  ],
+  "error_summary": null,
+  "metadata": {}
+}

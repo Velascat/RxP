@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "contract_kind": "runtime_result",
+  "invocation_id": "inv-004",
+  "runtime_name": "long-task",
+  "runtime_kind": "subprocess",
+  "status": "timed_out",
+  "exit_code": null,
+  "started_at": "2026-05-06T10:00:00Z",
+  "finished_at": "2026-05-06T10:05:00Z",
+  "stdout_path": "/tmp/rxp/stdout.log",
+  "stderr_path": "/tmp/rxp/stderr.log",
+  "artifacts": [],
+  "error_summary": "Execution exceeded timeout_seconds",
+  "metadata": {}
+}
