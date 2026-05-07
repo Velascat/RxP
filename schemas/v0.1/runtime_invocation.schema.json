@@ -8,7 +8,7 @@
     "contract_kind": {"type": "string", "const": "runtime_invocation"},
     "invocation_id": {"type": "string", "minLength": 1},
     "runtime_name": {"type": "string", "minLength": 1},
-    "runtime_kind": {"type": "string", "enum": ["subprocess", "http", "container", "manual", "unknown"]},
+    "runtime_kind": {"type": "string", "enum": ["subprocess", "http", "http_async", "container", "manual", "unknown"]},
     "working_directory": {"type": "string", "minLength": 1},
     "command": {
       "type": "array",

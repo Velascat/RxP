@@ -27,6 +27,29 @@ def test_runtime_kind_values_match_schema_enum() -> None:
     assert tuple(result_schema["properties"]["runtime_kind"]["enum"]) == RUNTIME_KINDS
 
 
+def test_http_async_runtime_kind_accepted() -> None:
+    """``http_async`` is a valid runtime_kind for both invocation and result."""
+    assert "http_async" in RUNTIME_KINDS
+    invocation = RuntimeInvocation(
+        invocation_id="inv-1",
+        runtime_name="archon-workflow",
+        runtime_kind="http_async",
+        working_directory="/tmp",
+        command=["unused"],
+    )
+    assert invocation.runtime_kind == "http_async"
+
+    result = RuntimeResult(
+        invocation_id="inv-1",
+        runtime_name="archon-workflow",
+        runtime_kind="http_async",
+        status="succeeded",
+        started_at="2026-05-07T10:00:00Z",
+        finished_at="2026-05-07T10:01:00Z",
+    )
+    assert result.runtime_kind == "http_async"
+
+
 def test_contract_kind_values_map_to_schema_files() -> None:
     for contract_kind in CONTRACT_KINDS:
         assert schema_path_for(contract_kind).exists()

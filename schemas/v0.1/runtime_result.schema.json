@@ -25,6 +25,7 @@
       "enum": [
         "subprocess",
         "http",
+        "http_async",
         "container",
         "manual",
         "unknown"
