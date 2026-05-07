@@ -3,6 +3,15 @@
 RxP is the **Runtime eXecution Protocol**. It defines normalized contracts for runtime invocation
 and runtime results produced by execution systems.
 
+## What RxP is
+
+- `RuntimeInvocation` — normalized request shape for execution systems
+- `RuntimeResult` — normalized response shape (status, exit code, artifacts)
+- `ArtifactDescriptor` — typed descriptor for files produced during execution
+- `runtime_kind` and `runtime_status` vocabularies
+- JSON Schemas for cross-language validation
+- Example payloads for interoperable integration
+
 ## What RxP is not
 
 RxP is not:
