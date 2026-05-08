@@ -28,3 +28,10 @@ _Free-form scratch. Clear periodically — old entries can be deleted once no lo
 ## 2026-05-08 — M1: CHANGELOG.md stub (Keep-a-Changelog format)
 
 Added a minimal CHANGELOG.md so M1 (and M5 format check) pass.
+
+## 2026-05-08 — CI regression guard
+
+Added .github/workflows/custodian-audit.yml + .hooks/pre-push.
+Both run `custodian-multi --fail-on-findings`. CI is the source of
+truth; pre-push catches regressions before they hit GitHub.
+
