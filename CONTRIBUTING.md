@@ -11,7 +11,7 @@ RxP is the **Runtime eXecution Protocol** — a contract-only specification for 
 ## Development Setup
 
 ```bash
-git clone https://github.com/Velascat/RxP.git
+git clone https://github.com/ProtocolWarden/RxP.git
 cd RxP
 python3 -m venv .venv
 source .venv/bin/activate
