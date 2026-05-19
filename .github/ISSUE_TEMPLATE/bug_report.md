@@ -54,4 +54,4 @@ What it does instead.
 
 ## Additional Context
 
-Anything else relevant — e.g., which downstream consumer surfaced this (ExecutorRuntime, OperationsCenter), related issues.
+Anything else relevant — e.g., which downstream consumer surfaced this (CoreRunner, OperationsCenter), related issues.

@@ -11,7 +11,7 @@ A one-sentence description of the proposal.
 
 ## Problem It Solves
 
-What can downstream systems (ExecutorRuntime / OperationsCenter) not currently express or validate?
+What can downstream systems (CoreRunner / OperationsCenter) not currently express or validate?
 
 ## Proposed Change
 
@@ -43,7 +43,7 @@ What you want added or changed. Include a sketch:
 
 Which systems need this, and how will they use it?
 
-- ExecutorRuntime: 
+- CoreRunner: 
 - OperationsCenter: 
 
 ## Alternatives Considered
@@ -54,7 +54,7 @@ Other shapes you thought about and why you ruled them out.
 
 Confirm this belongs in RxP (runtime contract layer) rather than:
 
-- [ ] ExecutorRuntime (subprocess execution mechanics)
+- [ ] CoreRunner (subprocess execution mechanics)
 - [ ] SourceRegistry (source / fork resolution)
 - [ ] OperationsCenter (planning / dispatch / observability)
 - [ ] CxRP (request-side contracts: lane, policy, contract refs)

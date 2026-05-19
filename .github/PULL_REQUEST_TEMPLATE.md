@@ -26,13 +26,13 @@ If this is a contract change, list the affected contracts:
 
 ## Boundary Check
 
-- [ ] No subprocess execution or runner logic introduced (belongs in ExecutorRuntime)
+- [ ] No subprocess execution or runner logic introduced (belongs in CoreRunner)
 - [ ] No CxRP-shaped fields leaked into RxP types (lane, policy, contract refs stay in CxRP)
 - [ ] No source-resolution logic introduced (belongs in SourceRegistry)
 
 ## Downstream Consumers
 
-<!-- Note any expected impact on ExecutorRuntime, OperationsCenter, etc. -->
+<!-- Note any expected impact on CoreRunner, OperationsCenter, etc. -->
 
 ## Testing
 
