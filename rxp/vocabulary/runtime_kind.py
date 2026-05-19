@@ -16,6 +16,6 @@ RUNTIME_KINDS = (
   polls a status URL until a terminal status. Sync from the caller's POV.
 - ``container``: containerized runtime (placeholder).
 - ``manual``: caller-supplied dispatcher (used for out-of-process services
-  whose transport ExecutorRuntime does not own).
+  whose transport CoreRunner does not own).
 - ``unknown``: catch-all for anything else.
 """

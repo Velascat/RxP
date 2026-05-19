@@ -42,7 +42,7 @@ tests/              # contract + schema validation tests
 
 RxP is the **contract layer only**. It must not contain:
 
-- Subprocess execution or runner logic (belongs in ExecutorRuntime)
+- Subprocess execution or runner logic (belongs in CoreRunner)
 - Source/fork resolution (belongs in SourceRegistry)
 - Routing or lane-selection logic (belongs in SwitchBoard)
 - Planning, scheduling, watchers, or queue systems
@@ -71,7 +71,7 @@ OperationsCenter typically maps a CxRP `ExecutionRequest` to an RxP `RuntimeInvo
 - [ ] Schemas updated under `schemas/vX.Y/` (if contract changed)
 - [ ] Examples updated under `examples/vX.Y/` (if contract changed)
 - [ ] Spec updated in `docs/spec/` (if normative behavior changed)
-- [ ] Downstream impact noted (ExecutorRuntime, OperationsCenter)
+- [ ] Downstream impact noted (CoreRunner, OperationsCenter)
 
 ## Code Style
 

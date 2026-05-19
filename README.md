@@ -20,7 +20,7 @@ RxP is not:
 - OperationsCenter
 - SwitchBoard
 - SourceRegistry
-- ExecutorRuntime
+- CoreRunner
 - a scheduler
 - a runner
 - a subprocess library
@@ -36,14 +36,14 @@ pip install -e .
 ```python
 from rxp import RuntimeInvocation, RuntimeResult
 inv = RuntimeInvocation(runtime_kind="subprocess", argv=["echo", "hello"])
-# Hand the invocation to ExecutorRuntime; receive a RuntimeResult.
+# Hand the invocation to CoreRunner; receive a RuntimeResult.
 ```
 
 JSON Schemas live under `rxp/schemas/` for non-Python consumers.
 
 ## Architecture
 
-RxP is a contract layer — three Pydantic models (`RuntimeInvocation`, `RuntimeResult`, `ArtifactDescriptor`) plus their `runtime_kind` / `runtime_status` enum vocabularies and JSON Schemas. ExecutorRuntime consumes the contract; CxRP describes work routing *to* a runtime, RxP describes the request/response *with* the runtime. See **CxRP vs RxP** below for the split, **v0.1 scope** for what's frozen, and **Example lifecycle** for an end-to-end walkthrough.
+RxP is a contract layer — three Pydantic models (`RuntimeInvocation`, `RuntimeResult`, `ArtifactDescriptor`) plus their `runtime_kind` / `runtime_status` enum vocabularies and JSON Schemas. CoreRunner consumes the contract; CxRP describes work routing *to* a runtime, RxP describes the request/response *with* the runtime. See **CxRP vs RxP** below for the split, **v0.1 scope** for what's frozen, and **Example lifecycle** for an end-to-end walkthrough.
 
 ## CxRP vs RxP
 
@@ -65,6 +65,6 @@ RxP  = how a runtime is invoked and what runtime result came back
 ## Example lifecycle
 
 OperationsCenter maps CxRP ExecutionRequest to RxP RuntimeInvocation.
-ExecutorRuntime consumes RxP RuntimeInvocation.
-ExecutorRuntime produces RxP RuntimeResult.
+CoreRunner consumes RxP RuntimeInvocation.
+CoreRunner produces RxP RuntimeResult.
 OperationsCenter maps RxP RuntimeResult back to CxRP ExecutionResult.

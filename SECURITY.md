@@ -33,6 +33,6 @@ RxP is a **contract-only specification**. It defines schemas, vocabulary enums, 
 
 ## Out of Scope
 
-- Vulnerabilities in downstream consumers (ExecutorRuntime, OperationsCenter) — report those to the respective project
+- Vulnerabilities in downstream consumers (CoreRunner, OperationsCenter) — report those to the respective project
 - Vulnerabilities in `jsonschema` or other upstream dependencies — report upstream
 - Misuse of RxP contracts by an implementing system (e.g., trusting unvalidated `command` input)

@@ -58,3 +58,7 @@ truth; pre-push catches regressions before they hit GitHub.
 
 - Added CLAUDE.md to .gitignore
 - Added .custodian/tmp*.yaml to exclude custodian audit temp files
+
+## 2026-05-19 — ADR 0006 Phase 5: rename ExecutorRuntime → CoreRunner in RxP docs
+
+README.md, SECURITY.md, CONTRIBUTING.md, rxp/vocabulary/runtime_kind.py updated.
