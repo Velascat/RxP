@@ -4,7 +4,7 @@
   "invocation_id": "inv-002",
   "runtime_name": "external-adapter",
   "runtime_kind": "subprocess",
-  "working_directory": "/workspace/adapters/archon",
+  "working_directory": "/workspace/adapters/dag_executor",
   "command": ["adapter-runner", "execute"],
   "environment": {
     "LOG_LEVEL": "info"
@@ -14,7 +14,7 @@
   "output_result_path": "/tmp/rxp/output.json",
   "artifact_directory": "/tmp/rxp/artifacts",
   "metadata": {
-    "source_name": "archon",
-    "adapter": "archon"
+    "source_name": "dag_executor",
+    "adapter": "dag_executor"
   }
 }
